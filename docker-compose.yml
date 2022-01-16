@@ -6,8 +6,7 @@ services:
     ports:
       - "3306:3306"
     environment: 
-      MYSQL_DATABASE: "{db name}"
-      MYSQL_ROOT_PASSWORD: "{db password}"
+      TZ: Asia/Seoul
     restart: always
     env_file: .env
     volumes:
