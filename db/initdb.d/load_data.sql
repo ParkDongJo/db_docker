@@ -1,0 +1,1 @@
+LOAD DATA INFILE './test.csv' INTO TABLE test FIELDS TERMINATED BY ',' (`name`);
