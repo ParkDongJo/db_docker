@@ -9,8 +9,8 @@ services:
       MYSQL_DATABASE: "{db name}"
       MYSQL_ROOT_PASSWORD: "{db password}"
     restart: always
-    command:
-      - --character-set-server=utf8mb4
-      - --collation-server=utf8mb4_unicode_ci
+    env_file: .env
     volumes:
-      - D:/docker/mysql/data:/var/lib/mysql
+      - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/data:/var/lib/mysql
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
